@@ -132,6 +132,76 @@
             <button type="submit" class="btn btn-danger w-100">Predict</button>
         </form>
         <p id="prediction-result" class="text-center mt-3"></p>
+        
+        <!-- Attribute Descriptions Section -->
+        <div class="w-75 mx-auto bg-light p-4 rounded shadow mt-4">
+            <h4 class="text-danger mb-3">Attribute Descriptions:</h4>
+            <dl class="row">
+                <dt class="col-sm-3">Age</dt>
+                <dd class="col-sm-9">Age in years</dd>
+                
+                <dt class="col-sm-3">Gender</dt>
+                <dd class="col-sm-9">Biological sex (Male/Female)</dd>
+                
+                <dt class="col-sm-3">Chest Pain Type</dt>
+                <dd class="col-sm-9">
+                    <ul>
+                        <li><strong>Typical Angina</strong>: Chest pain related to decreased blood supply to the heart</li>
+                        <li><strong>Atypical Angina</strong>: Chest pain not meeting criteria for angina</li>
+                        <li><strong>Non-anginal Pain</strong>: Chest pain not caused by heart disease</li>
+                        <li><strong>Asymptomatic</strong>: No chest pain symptoms</li>
+                    </ul>
+                </dd>
+                
+                <dt class="col-sm-3">Resting Blood Pressure</dt>
+                <dd class="col-sm-9">Blood pressure measurement in mmHg at rest (normal range: 90-120 mmHg)</dd>
+                
+                <dt class="col-sm-3">Serum Cholesterol</dt>
+                <dd class="col-sm-9">Cholesterol measurement in mg/dl (desirable: <200 mg/dl)</dd>
+                
+                <dt class="col-sm-3">Fasting Blood Sugar</dt>
+                <dd class="col-sm-9">Blood sugar after fasting (>120 mg/dl indicates possible diabetes)</dd>
+                
+                <dt class="col-sm-3">Resting ECG Results</dt>
+                <dd class="col-sm-9">
+                    <ul>
+                        <li><strong>Normal</strong>: No abnormalities</li>
+                        <li><strong>ST-T wave abnormality</strong>: May indicate ischemia or other conditions</li>
+                        <li><strong>Left ventricular hypertrophy</strong>: Thickening of heart's left ventricle</li>
+                    </ul>
+                </dd>
+                
+                <dt class="col-sm-3">Max Heart Rate</dt>
+                <dd class="col-sm-9">Maximum heart rate achieved during exercise (typically 220 minus age)</dd>
+                
+                <dt class="col-sm-3">Exercise-induced Angina</dt>
+                <dd class="col-sm-9">Chest pain during physical activity (indicates possible coronary artery disease)</dd>
+                
+                <dt class="col-sm-3">ST Depression</dt>
+                <dd class="col-sm-9">ST segment depression induced by exercise relative to rest (measured in mm)</dd>
+                
+                <dt class="col-sm-3">Slope of ST Segment</dt>
+                <dd class="col-sm-9">
+                    <ul>
+                        <li><strong>Upsloping</strong>: Generally normal</li>
+                        <li><strong>Flat</strong>: May indicate ischemia</li>
+                        <li><strong>Downsloping</strong>: May indicate significant coronary artery disease</li>
+                    </ul>
+                </dd>
+                
+                <dt class="col-sm-3">Number of Major Vessels</dt>
+                <dd class="col-sm-9">Number of major blood vessels (0-4) colored by fluoroscopy (indicates blockages)</dd>
+                
+                <dt class="col-sm-3">Thalassemia</dt>
+                <dd class="col-sm-9">
+                    <ul>
+                        <li><strong>Normal</strong>: No blood disorder</li>
+                        <li><strong>Fixed Defect</strong>: Previous heart damage</li>
+                        <li><strong>Reversible Defect</strong>: Blood flow issues during exercise</li>
+                    </ul>
+                </dd>
+            </dl>
+        </div>
     </section>
     
     <footer class="bg-dark text-white text-center py-3">
