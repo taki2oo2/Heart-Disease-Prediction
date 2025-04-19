@@ -1,0 +1,30 @@
+pipeline {
+    agent any  // Run the pipeline on any available Jenkins agent (server/worker)
+    stages {
+        // Stage 1: Fetch code from GitHub
+        stage('Checkout Code') {
+            steps {
+                git branch: 'main', 
+                url: 'https://github.com/singhsuhas77/Heart-Disease-Prediction.git'
+            }
+        }
+        // Stage 2: Install Python dependencies
+        stage('Install Dependencies') {
+            steps {
+                sh 'pip3 install -r requirements.txt'  // Install packages from requirements.txt
+            }
+        }
+        // Stage 3: Train the ML model
+        stage('Train Model') {
+            steps {
+                sh 'python3 prediction.py'  // Run the script to train the model
+            }
+        }
+        // Stage 4: Deploy the Flask app
+        stage('Deploy App') {
+            steps {
+                sh 'python3 app.py &'  // Start the Flask app in the background
+            }
+        }
+    }
+}
